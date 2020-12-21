@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""GraphQl Model Schemas are defined here"""
+type UserSchema {
+  id: Float
+  email: String
+  name: String
+}
+
+type Query {
+  getUser(data: GetUserQueryInput!): [UserSchema!]!
+}
+
+input GetUserQueryInput {
+  searchstring: String
+}
+
+type Mutation {
+  """Create Author Field"""
+  CreateUser(data: UserCreateInput!): UserSchema!
+}
+
+"""Create User Input"""
+input UserCreateInput {
+  email: String!
+  name: String
+}
